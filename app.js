@@ -1,6 +1,7 @@
 
 const inquirer = require('inquirer')
-
+const fs = require('fs');
+const generatePage = require('./src/page-template');
 // console.log(inquirer)
 
 
@@ -136,5 +137,6 @@ return inquirer
   promptUser()
   .then(promptProject)
   .then(portfolioData => {
-    console.log(portfolioData);
+    const pageHTML = generatePage(portfolioData);
+    // console.log(portfolioData);
   });
