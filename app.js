@@ -5,6 +5,7 @@ const generatePage = require('./src/page-template');
 // console.log(inquirer)
 
 
+
 const promptUser = () => {
 return inquirer
   .prompt([
@@ -138,5 +139,10 @@ return inquirer
   .then(promptProject)
   .then(portfolioData => {
     const pageHTML = generatePage(portfolioData);
-    // console.log(portfolioData);
+    fs.writeFile('./index.html', pageHTML, err => {
+      if (err) throw new Error(err);
+      console.log('Portfolio complete! Check ouy inddex.html to see the output!');
   });
+});
+
+  
