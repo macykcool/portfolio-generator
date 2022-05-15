@@ -16,7 +16,7 @@ not rele dog
 https://github.com/macykcool/portfolio-generator
 
 ## Screencastify 
-
+![portfolio demo](./gif/gener.gif)
 
 ## Built With
 - HTML
